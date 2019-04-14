@@ -1,6 +1,7 @@
 #!/bin/bash
 
 MOUNTPOINT=/userdata
+RESULTDIR=${HOME}/runos-docker/runos/functest/results
 PWD=`pwd`
 RUNOS_PORT=8000
 
@@ -8,6 +9,7 @@ docker run --rm --privileged -ti \
        -e DEV_UID=$UID \
        -e DEV_USER=$USER \
        -v $PWD:$MOUNTPOINT \
+       -v $RESULTDIR:$MOUNTPOINT/results \
        -v /usr/src:/usr/src \
        -v /lib/modules:/lib/modules \
        -v /linux-kernel:/linux-kernel \

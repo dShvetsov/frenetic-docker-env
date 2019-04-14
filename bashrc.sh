@@ -13,6 +13,5 @@ service openvswitch-switch start
 # use bash-completion
 . /etc/bash_completion
 
-alias ovs-ofctl="ovs-ofctl -OOpenFlow13"
 eval $(opam env)
 eval `opam config env`

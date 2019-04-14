@@ -42,6 +42,8 @@ RUN git clone https://github.com/mininet/mininet.git && cd mininet && ./util/ins
 RUN apt -y install net-tools
 RUN apt -y install libcurl4-openssl-dev libssl-dev
 RUN apt -y install python-pip && pip install ryu pycurl
+RUN apt -y install libgoogle-perftools-dev curl wget iproute2 bash-completion iputils-ping
+RUN pip install tornado simplejson
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 
